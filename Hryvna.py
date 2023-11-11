@@ -14,9 +14,9 @@ hryvnas = []
 
 
 for item in response_parse:
-  if item.startswith("35"):
+  if item.startswith("USD"):
       for hryvna_item in item.split ("</span>"):
-          if hryvna_item.startswith("35") and hryvna_item[1].isdigit():
+          if hryvna_item.startswith("USD") and hryvna_item[1].isdigit():
               hryvnas.append(hryvna_item)
 bit = int(input("How much hryvnas do you have?  "))
 value = hryvnas[0][1:]
